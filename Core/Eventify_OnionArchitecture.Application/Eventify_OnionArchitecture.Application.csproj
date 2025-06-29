@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eventify_OnionArchitecture.Domain\Eventify_OnionArchitecture.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
