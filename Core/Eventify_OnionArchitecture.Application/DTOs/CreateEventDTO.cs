@@ -5,7 +5,7 @@ namespace Eventify_OnionArchitecture.Application.DTOs
     public class CreateEventDTO
     {
         public string Title { get; set; }
-        public DateTimeOffset EventDate { get; set; }
+        public DateTimeOffset Date { get; set; }
         public Location Location { get; set; }
     }
 }

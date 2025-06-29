@@ -2,7 +2,7 @@
 {
     public class Pagination
     {
-        public int ItemCount { get; set; }
-        public int PageCount { get; set; }
+        public int ItemCount { get; set; } = 5;
+        public int PageCount { get; set; } = 0;
     }
 }
