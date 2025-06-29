@@ -16,7 +16,7 @@ namespace Eventify_OnionArchitecture.Infrastructure.Services
             foreach (var item in eventItems)
             {
                 if (eventItems is not null)
-                    stringBuilder.AppendLine($"Event: {item.Title} - Location: {item.Location} - Date:{item.EventDate.ToString("HH:mm - dd/MM/yyyy")}");
+                    stringBuilder.AppendLine($"Event: {item.Title} - Location: {item.Location.City} - Date:{item.EventDate.ToString("HH:mm - dd/MM/yyyy")}");
             }
 
             return stringBuilder.ToString().TrimEnd();

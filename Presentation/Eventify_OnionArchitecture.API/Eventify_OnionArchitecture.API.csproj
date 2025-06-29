@@ -11,7 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\Core\Eventify_OnionArchitecture.Application\Eventify_OnionArchitecture.Application.csproj" />
+    <ProjectReference Include="..\..\Core\Eventify_OnionArchitecture.Domain\Eventify_OnionArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Eventify_OnionArchitecture.Infrastructure\Eventify_OnionArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Persistence\Eventify_OnionArchitecture.Persistence\Eventify_OnionArchitecture.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

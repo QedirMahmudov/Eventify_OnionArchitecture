@@ -1,3 +1,6 @@
+using Eventify_OnionArchitecture.Application;
+using Eventify_OnionArchitecture.Infrastructure;
+using Eventify_OnionArchitecture.Persistence;
 
 namespace Eventify_OnionArchitecture.API
 {
@@ -13,6 +16,12 @@ namespace Eventify_OnionArchitecture.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddPersistenceServices();
+            builder.Services.AddApplicationServices();
+            builder.Services.AddInfrastructureServices();
+
+
 
             var app = builder.Build();
 
