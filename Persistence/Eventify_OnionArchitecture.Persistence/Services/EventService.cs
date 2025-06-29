@@ -41,12 +41,14 @@ namespace Eventify_OnionArchitecture.Persistence.Services
         //Ona gorede selectnen dto icinde olan propertileri getiririk.
         public async Task<IEnumerable<EventDTO>> GetAllEventsAsync(Pagination pagination)
         {
-            return await _context.Events.Select(e => new EventDTO
-            {
-                EventDate = e.Date,
-                Location = e.Location,
-                Title = e.Title
-            }).Skip(pagination.PageCount * pagination.ItemCount)
+            return await _context.Events
+                .AsNoTracking()
+                .Select(e => new EventDTO
+                {
+                    EventDate = e.Date,
+                    Location = e.Location,
+                    Title = e.Title
+                }).Skip(pagination.PageCount * pagination.ItemCount)
               .Take(pagination.ItemCount)
               .ToListAsync();
         }

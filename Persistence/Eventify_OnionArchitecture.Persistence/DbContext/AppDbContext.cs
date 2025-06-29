@@ -8,10 +8,22 @@ namespace Eventify_OnionArchitecture.Persistence
     {
         public DbSet<Event> Events { get; set; }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Event>().OwnsOne(e => e.Location);
+            base.OnModelCreating(modelBuilder);
+        }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseInMemoryDatabase("EventifyDb");
         }
+
+
+
+
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
