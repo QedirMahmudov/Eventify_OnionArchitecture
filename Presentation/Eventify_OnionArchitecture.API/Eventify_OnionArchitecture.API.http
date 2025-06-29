@@ -1,0 +1,6 @@
+@Eventify_OnionArchitecture.API_HostAddress = http://localhost:5144
+
+GET {{Eventify_OnionArchitecture.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
